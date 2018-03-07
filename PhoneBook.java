@@ -18,20 +18,13 @@ public class PhoneBook {
 			phonebook.put(name, number);
 			System.out.println("");
 		}
-		System.out.print("Search for number: ");
-		double number = scnr.nextDouble();
-		for (int i = 0; i < phonebook.size(); i ++) {
-			//if (phonebook.get(i).intValue() == number) {
-				//System.out.println("Person: " + phonebook.get(i));
-			//}
-		}
+		System.out.print("Type name to search for number: ");
+		String contact = scnr.next();
+		
 		for (String key : phonebook.keySet()) {
-			if (phonebook.get(key) == number) {
-				System.out.println("Corresponding name: " + key);
+			if (key.equals(contact)) {
+				System.out.println("Corresponding number: " + phonebook.get(key).intValue());
 			}
-		}
-		if (phonebook.containsValue(number)) {
-			
 		}
 		System.out.println("");
 		System.out.println("Phone Book:");
